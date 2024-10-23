@@ -14,6 +14,7 @@ router.post("/criar", async (request, response) => {
       data: {
         name: request.body.name,
         quantity: request.body.quantity,
+        value: request.body.value
       }
     });
     response.status(201).json({ message: 'Produto criado com sucesso.' });
@@ -53,7 +54,8 @@ router.put('/produtos/:name', async (request, response) => {
       },
       data: {
         name: request.body.name,
-        quantity: request.body.quantity
+        quantity: request.body.quantity,
+        value: request.body.value
       }
     })
     response.status(201).json({ message: 'Informações do produto atualizadas.' });

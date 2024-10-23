@@ -17,4 +17,5 @@ model Produtos {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
   name    String @unique
   quantity   Int
+  value      Float
 }
